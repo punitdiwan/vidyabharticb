@@ -13,7 +13,7 @@ const Contactus = ({data_header}) => {
         </div>
         <div className="mt-[15px] lg:mx-16 px-6     flex md:flex-row flex-col">
           <iframe className=" md:w-[600px] md:h-[450px] "
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3665.3754402965683!2d77.418838!3d23.265804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c6831fe05a8d7%3A0xd45ea3ab822f4da0!2sChandbarh%2C%20Sourabh%20Colony%2C%20Bhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1635158735074!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3665.3562959759106!2d77.4206111!3d23.266500000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDE1JzU5LjQiTiA3N8KwMjUnMTQuMiJF!5e0!3m2!1sen!2sin!4v1753958102711!5m2!1sen!2sin"
 
             style={{ border: "0" }}
             allowFullScreen=""
