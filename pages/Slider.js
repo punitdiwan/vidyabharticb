@@ -9,18 +9,22 @@ import React, { useState, useEffect } from 'react';
 const Slider = ({ slider_data }) => {
 
    
-
+console.log("slider_data",slider_data)
   const slides = [
     { title: "/images/is15.jpg ", description: 'Lorem ipsum' },
     { title: "/images/sd2.jpg", description: 'Lorem ipsum' },
   ];
+  const sortedSlides = slider_data?.data
+    ? [...slider_data.data].sort((a, b) => a.sort_order - b.sort_order)
+    : [];
+  
   
 
   return (
     <div>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} className="mt-14" >
-        {slider_data?.data?.length > 0 ?
-            slider_data?.data?.map((item, index) => {
+        {sortedSlides.length > 0 ?
+            sortedSlides.map((item, index) => {
               return <div className="carousel-inner" role="listbox" key={index} >
                 <div className='carousel' role="listbox">
                   <img
