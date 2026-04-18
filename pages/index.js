@@ -8,7 +8,7 @@ import AdmissionBanner from '../pages/AdmissionBanner'
 
 export default function Home({ data_header,slider_data }) { 
 
-  console.log(data_header)
+  // console.log(data_header)
   return (
     <div>
       <Layout header_data={data_header}>
