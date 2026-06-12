@@ -96,7 +96,7 @@ const AdmissionBanner = () => {
                             minHeight: '30vh', // Allow modal height to adjust based on content
                             maxHeight: '90vh', // Limit the height for larger screens
                             overflow: 'hidden',
-                            marginTop:"80px"
+                            marginTop:'80px',
                         }}
                     >
                         {/* Close button */}
@@ -118,10 +118,10 @@ const AdmissionBanner = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="30"
                                 height="30"
-                                fill="currentcolor"
+                                fill="currentColor"
                                 className="bi bi-x"
                                 viewBox="0 0 16 16"
-                                style={{ marginTop: "10px" }}
+                                style={{ marginTop: "10px", color:"white" }}
                             >
                                 <path
                                     fillRule="evenodd"

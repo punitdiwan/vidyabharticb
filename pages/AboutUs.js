@@ -17,7 +17,7 @@ const AboutUs = ({ data_header }) => {
 
 
         if (response?.data?.data?.length > 0) {
-          console.log(response.data);
+          // console.log(response.data);
           setdata(response.data.data[0])
           // response?.data?.data[0].map((data1,i)=>{
           //     setdata(data1) 
@@ -37,7 +37,7 @@ const AboutUs = ({ data_header }) => {
   return (
     <Layout header_data={data_header}>
       <div
-        className="mx-3 "
+        className="mx-3 mt-10"
       >
         <img
           className="w-full "
@@ -46,13 +46,13 @@ const AboutUs = ({ data_header }) => {
         <div className="leading-[ 22.5px] font-normal">
           <h5 className="text-center">
             {/* {data?.heading || "About School"} */}
+            {/* About us */}
             About us
 
           </h5>
           <p className="mb-0">
-            Vidhya Bharti Hr.Sec. School is a Higher secondary school for both girls and boys managed by Vidhya Bharti Group. Vidhya Bharti Group was established in 1991 and run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education. Vidya Bharti Hr. Sec. School, Chandbarh endeavours to provide the finest education encompassed within state-of-the-art infrastructure. Artistic and academic pursuits are encouraged equally and students have ready exposure to global heritage and cultures. The school’s curriculum lays emphasis on concepts and skills, rather than on textbooks. Tagoreans gain a clear sense of direction paved by their analytical approach, critical thinking skills and creative sagacity. Effective interpersonal and collaborative communication shapes these global citizens and leaders. The School's philosophy is well illustrated in Rabindranath Tagore's words:
-            <br />
-            "I was brought up in an atmosphere of aspiration, aspiration for the expansion of the human spirit. Such an opportunity has given me confidence in the We in our home sought freedom of power in our language, freedom of imagination in our literature, freedom of soul in our religious creeds, and that of mind in our social environment. power of education which is one with life and only which can give us real freedom, the highest that is claimed for man, his freedom of moral communion in the human world
+            Rose Mary School is a Higher secondary school for both girls and boys managed by rose mary Group. Rose Mary Group was established in 1991 and run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education.
+            We, Rose Mary High School, understand that each child is a distinct individual who needs to be nurtured in order to grow into a mature and responsible citizen. Our academic infrastructure along with a wide range of co-curricular activities help our students in the all round personality development. We have a strong team of motivated teachers who are always ready to accept challenges of developing the potential of each and every student. Keeping in view the ideas of democracy and our ancient culture, Rose Mary High School strives to provide a system of education most suited to the needs of our society today. Stress on innovative methods of teaching , opportunities for shouldering responsibilities during school life, constant participation in sports and co-curricular activities lend meaning to the school life. Thus, the end product is the harmonious, all round developed personality of our students poised on the threshold of life.
           </p>
         </div>
         <img
@@ -81,6 +81,6 @@ export async function getStaticProps(context) {
   }
   return {
     props: { data_header },
-    revalidate: 86400, // will be passed to the page component as props
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 }
