@@ -1,20 +1,21 @@
 import "tailwindcss/tailwind.css";
 import Layout from "../Component/Layout";
 import SchoolMassage from '../pages/SchoolMassage'
-import Slider from '../pages/Slider'
-import HomeEvents from '../pages/HomeEvents'
 import AdmissionBanner from '../pages/AdmissionBanner'
- 
+import dynamic from 'next/dynamic'
 
-export default function Home({ data_header,slider_data }) { 
+const HomeEvents = dynamic(() => import('../pages/HomeEvents'), { ssr: false });
+const Slider = dynamic(() => import('../pages/Slider'), { ssr: false });
+
+
+export default function Home({ data_header ,slider_data }) { 
 
   // console.log(data_header)
   return (
     <div>
       <Layout header_data={data_header}>
-        <AdmissionBanner />
         <Slider slider_data={slider_data}/> 
-        
+        <AdmissionBanner />
         <SchoolMassage  header_data={data_header}/>
         <HomeEvents/>
       </Layout>
@@ -28,7 +29,7 @@ export async function getStaticProps(context) {
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/config?fields=*,logo.data.full_url`)
- 
+
     data_header = await response.json()  
   } 
   catch (error) {
@@ -36,17 +37,17 @@ export async function getStaticProps(context) {
   } 
    
   let slider_data  
-      try {
-        const response1 = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/slider?status=published&fields=*.*.*`)
-   
-        slider_data = await response1.json()  
-      } 
-      catch (error) {
-        slider_data = false 
-      }  
-  
-  return {
-    props: { data_header,slider_data },
-    revalidate: 86400, // will be passed to the page component as props
-  }
+  try {
+    const response1 = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/slider?status=published&fields=*.*.*`)
+
+    slider_data = await response1.json()  
+  } 
+  catch (error) {
+    slider_data = false 
+  }  
+
+return {
+props: { data_header,slider_data },
+revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
+}
 }

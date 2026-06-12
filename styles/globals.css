@@ -18,7 +18,6 @@ display: block;
 .dropdown-menu{ 
   text-align: left;
 }
-
 .dropdown:hover .dropdown-menu {
 display: block;
 }
