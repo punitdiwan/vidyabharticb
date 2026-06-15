@@ -26,7 +26,7 @@ const Header = ({ header_data }) => {
         >
           <img
             className="h-20 w-15 md:mr-10 "
-            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url.replace("http://", "https://") : "https://cms.maitretech.com/uploads/ukconventnb/originals/a75ae161-3d37-4718-b0c2-67571f031660.png"}
+            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url.replace("http://", "https://") : "https://cms.maitretech.com/uploads/vidyabharticb/originals/a75ae161-3d37-4718-b0c2-67571f031660.png"}
           //  src="https://rosemarydn.com/images/logo.png"
           />
           <div className="mt-1 text-white item-center ml-1 ">
@@ -148,7 +148,7 @@ const Header = ({ header_data }) => {
               <Link href="/Contactus" className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline">
                 Contact us
               </Link>
-              <Link href="https://cms.schoolscoop.co.in/admin/#/login?project=ukconventnb" target="_blank" className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0">
+              <Link href="https://cms.schoolscoop.co.in/admin/#/login?project=vidyabharticb" target="_blank" className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0">
                 Login
               </Link>
 

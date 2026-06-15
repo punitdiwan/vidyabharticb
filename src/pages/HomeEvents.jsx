@@ -31,7 +31,7 @@ const HomeEvents = () => {
     axios
       .post(`/api/school-data`, {
         path: `/api/website/birthdays`,
-        school_id: 'ukconventnb'
+        school_id: 'vidyabharticb'
       })
       .then(response => {
         console.log("Birthday Data Received:", response.data);

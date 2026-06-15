@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     try {
       const baseUrl = process.env.VITE_BASE_URL || 'https://cms.maitretech.com';
-      const school = process.env.VITE_SCHOOL || 'ukconventnb';
+      const school = process.env.VITE_SCHOOL || 'vidyabharticb';
       // const apiToken = process.env.VITE_API_TOKEN; // Loaded from .env
       const apiToken = "UKmjTqR4xJP7uXncUdNXpDNP";
 

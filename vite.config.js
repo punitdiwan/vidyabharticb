@@ -53,7 +53,7 @@ const apiPlugin = () => ({
 
           try {
             const baseUrl = 'https://cms.maitretech.com';
-            const school = 'ukconventnb';
+            const school = 'vidyabharticb';
             const apiToken = 'UKmjTqR4xJP7uXncUdNXpDNP';
 
             const uploadFile = async (fileKey) => {
